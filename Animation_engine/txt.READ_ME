@@ -1,0 +1,45 @@
+Dependencies : 
+-pyglet 
+-python 3.6 or above 
+-ability to run bash (can be done with git on windows)
+-prewritten code that creates a txt file in the format below (see example) 
+
+############################################################################################################
+############################################################################################################
+
+here is the overall flow in the simulated creation of the LED board animation- 
+
+1. a directory is made with a image cache folder in specified location 
+2. a cpp or python code is run to create a txt file with the unrendered frames 
+3. python runs and renders the images into a series of pngs 
+4. python/another application takes the png and nicely packages them into some kind of animation file
+5. the image cache is cleared and the dir is deleted 
+6. a left over gif file will be present if all goes well
+
+a series of bash scripts are created to run each of these steps with the input of python/cpp code being 
+the only necessary addition 
+
+I have decided to make the txt format simplistic and only have a few colors 
+
+here is the color key 
+
+0 - (0,0,0) black 
+1 - (255,255,255) white 
+2 - (128,128,128) grey 
+3 - (255,0,0) red 
+4 - (255,128,0) orange 
+5 - (255,255,0) yellow 
+6 - (0,255,0) green 
+7 - (0,0,255) blue 
+8 - (128,0,255) indigo  
+9 - (204,0,204) violet 
+
+
+############################################################################################################
+############################################################################################################
+
+format of the unrendered txt file: 
+
+1 - frame number
+2 - series of numbers seperated by white spaces (64 numbers long) 
+
