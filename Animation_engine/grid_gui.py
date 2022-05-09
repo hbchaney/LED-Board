@@ -20,7 +20,7 @@ colors_coordination = {'0' : (0,0,0),'1' : (255,255,255),'2' : (128,128,128),'3'
 window = pyglet.window.Window(768,768) 
 batch =  pyglet.graphics.Batch()
 
-def color_changer(colors_mat,frame): 
+def color_changer(colors_mat,frame,hex=False): 
     '''
     colors : 2d array with color data 
     frame = 
