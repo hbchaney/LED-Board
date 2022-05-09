@@ -1,5 +1,7 @@
 def hex_to_RGB(hex : str):
-    def hex_helper(numstr : str):
+    def hex_helper(numstr : str) -> int: 
+        #takes a two digit hexidecimal string and returns an integer
+        #between 0 and 255, inclusive.
         mapping = {
             'a' : 10
             ,'b' : 11
@@ -16,8 +18,10 @@ def hex_to_RGB(hex : str):
             result += val * 16**power
             power +=1 
         return result
+
     if len(hex) != 6 :
-        raise Exception('Invalid hex string input.')
+        raise Exception('Invalid hex string input.') #only takes strings of length 6
+    
     r = hex[0:2]
     g = hex[2:4]
     b = hex[4:]
